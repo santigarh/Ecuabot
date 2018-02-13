@@ -1,0 +1,350 @@
+[
+	{
+		"title" : "Mensaje de bienvenida",
+		"content" : "Hola {first_name} me complace anunciarte que hemos registrados tus datos correctamente!",
+		"context" : "welcome",
+		"type" : "common",
+		"order" : 3,
+		"format" : true,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Saludo",
+		"content" : "Hola {first_name} tienes una pregunta para mi ?",
+		"context" : "hi",
+		"type" : "hi",
+		"order" : 3,
+		"format" : true,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Presentación",
+		"content" : "Mi nombre es EcuaBot-Tourism, espero poder ayudarte",
+		"context" : "welcome",
+		"type" : "common",
+		"order" : 2,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Obtener info",
+		"content" : "Antes de comenzar necesito recabar cierta información, espero no te moleste",
+		"context" : "welcome",
+		"type" : "common",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "obtener preferencias",
+		"content" : "Quieres una recomendación cercana a tu ubicación te puedo ayudar en lo siguiente: ",
+		"context" : "welcome",
+		"type" : "common",
+		"order" : 4,
+		"identifier" : "set_preference",
+		"type_message" : "quick_replies",
+		"replies" : [
+			{
+				"title" : "Sitio Turistico",
+				"payload" : "TOURISM"
+			},
+			{
+				"title" : "Comida",
+				"payload" : "FOOD"
+			},
+			{
+				"title" : "Hospedaje",
+				"payload" : "HOTEL"
+			},
+			{
+				"title" : "Clima",
+				"payload" : "WEATHER"
+			}
+			
+		]
+	},
+	{
+		"title" : "obtener preferencias",
+		"content" : "Para otra recomendación cercana a tu ubicación te puedo ayudar en lo siguiente: ",
+		"context" : "welcome",
+		"type" : "other",
+		"order" : 4,
+		"identifier" : "set_preference",
+		"type_message" : "quick_replies",
+		"replies" : [
+			{
+				"title" : "Sitio Turistico",
+				"payload" : "TOURISM"
+			},
+			{
+				"title" : "Comida",
+				"payload" : "FOOD"
+			},
+			{
+				"title" : "Hospedaje",
+				"payload" : "HOTEL"
+			},
+			{
+				"title" : "Clima",
+				"payload" : "WEATHER"
+			}
+			
+		]
+	},
+	{
+		"title" : "WEATHER",
+		"content" : "Muy bien comenzemos enviame tu ubicacion actual o cualquier otra donde quieras saber el clima",
+		"type" : "quick_replies",
+		"context" : "WEATHER",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "WEATHER",
+		"content" : "Por defecto nos puedes enviar tu ubicación actual dando o clic o también puedes elegir otra ubicación",
+		"type" : "quick_replies",
+		"context" : "WEATHER",
+		"order" : 2,
+		"type_message" : "quick_replies_location"
+	},
+	{
+		"title" : "TOURISM",
+		"content" : "Muy bien comenzemos",
+		"type" : "quick_replies",
+		"context" : "TOURISM",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "TOURISM",
+		"content" : "Te comento que puedo darte una recomendación siempre y cuando me pases tu localización",
+		"type" : "quick_replies",
+		"context" : "TOURISM",
+		"order" : 2,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "TOURISM",
+		"content" : "hagamos una prueba, selecciona tu localización",
+		"type" : "quick_replies",
+		"context" : "TOURISM",
+		"order" : 3,
+		"type_message" : "quick_replies_location"
+	},
+	{
+		"title" : "COMIDA",
+		"content" : "Genial, Para comenzar a buscar un restaurante. Puedes mandarnos tu ubicacion actual o cualquiera que elijas ",
+		"type" : "quick_replies",
+		"context" : "FOOD",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "HOTEL",
+		"content" : "Genial, Para comenzar a buscar un Hotel. Puedes mandarnos tu ubicacion actual o cualquiera que elijas ",
+		"type" : "quick_replies",
+		"context" : "HOTEL",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Clima info",
+		"content" : "Actualmente {city} se encuentra a {temperature} grados centigrados y con {cloud}",
+		"context" : "WEATHER",
+		"type" : "specific",
+		"order" : 1,
+		"format" : true,
+		"data_model": true,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Hotel info",
+		"content" : "Cerca a tu ubicación encontramos:{name} ubicado en {ubication} ",
+		"context" : "HOTEL",
+		"type" : "specific",
+		"order" : 1,
+		"format" : true,
+		"data_model": true,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Sitio Turistico info",
+		"content" : "Hay cercano a tu ubicación lo siguiente: {name} ubicado en {ubication} ",
+		"context" : "TOURISM",
+		"type" : "specific",
+		"order" : 1,
+		"format" : true,
+		"data_model": true,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Comida info",
+		"content" : "Cercano a tu ubicación encontramos: {name} ubicado en {ubication}",
+		"context" : "FOOD",
+		"type" : "specific",
+		"order" : 1,
+		"format" : true,
+		"data_model": true,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Clima completado",
+		"content" : "Ahora que ya sabes como funciona, puedes hacerlo las veces que quieras :D",
+		"type" : "Done",
+		"context" : "location",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Keywords",
+		"content" : "Escribe 'ayuda': para indicarte algunas funcionalidades - Escribe 'contacto': para darte información de contacto de la página - Escribe 'otra preferencia': para dirigirte a que busques otra recomendación ",
+		"type" : "keywords",
+		"context" : "help",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Ayuda",
+		"content" : "Si necesitas contactar directamente escribe 'contacto' o si quieres saber algunos palabras claves del bot escribe 'keywords'",
+		"type" : "help",
+		"context" : "help",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Conctato ",
+		"content" : "Contacto",
+		"type" : "develop",
+		"context" : "develop",
+		"order" : 1,
+		"type_message" : "template",
+		"template_type": "generic",
+		"elements": [
+									{
+				            "title": "EcuaBot-Tourism",
+				            "subtitle": "Universidad de las Fuerzas Armadas ESPE",
+				            "item_url": "https://www.facebook.com/EcuaBot-Tourism-2067961996563280/",
+				            "image_url": "https://scontent.fuio9-1.fna.fbcdn.net/v/t1.0-0/p370x247/22815352_2067968506562629_6867004129071136836_n.png?oh=97d6cbf0635de6951a08f18ac0734796&oe=5AEC5703",
+				            "buttons": [
+					            {
+					              "type": "web_url",
+					              "url": "https://www.facebook.com/EcuaBot-Tourism-2067961996563280/",
+					              "title": "Facebook"
+					            },
+					            {
+					              "type": "postback",
+					              "payload": "PRUEBA",
+					              "title": "Boton de prueba."
+					            }
+					          ]
+					        }
+
+          	]
+	},
+	{
+		"title" : "Ayuda",
+		"content" : "No dudes en contactarnos 😀 🙈 🍇",
+		"type" : "develop",
+		"context" : "develop",
+		"order" : 2,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Mensaje no encontrado",
+		"content" : "Lo siento, no puedo comprender lo que dices!",
+		"context" : "not_found",
+		"type" : "not_found",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Regreso",
+		"content" : "Hola {first_name} es bueno tenerte de regreso :D",
+		"context" : "return_user",
+		"type" : "specific",
+		"order" : 1,
+		"format" : true,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Mensaje no encontrado",
+		"content" : "Recuerda que siempre podrás hablar conmigo!",
+		"context" : "remainer",
+		"type" : "remainer",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "No encontrado",
+		"content" : "Cerca a tu ubicacion no se encontro alojamiento :( lo siento",
+		"context" : "sin_ubicacion",
+		"type" : "sin_ubicacion",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "postback",
+		"content" : "Ahora ya se manejar los eventos postback",
+		"context" : "PRUEBA",
+		"type" : "postback",
+		"order" : 1,
+		"format" : true,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Imagen random",
+		"content" : "",
+		"context" : "common",
+		"type" : "image",
+		"order" : 1,
+		"url": "http://i.imgur.com/T29iOcj.jpg",
+		"type_message" : "image"
+	},
+	{
+		"title" : "Video random",
+		"content" : "",
+		"context" : "common",
+		"type" : "video",
+		"order" : 1,
+		"url": "http://techslides.com/demos/sample-videos/small.mp4",
+		"type_message" : "video"
+	},{
+		"title" : "Clima",
+		"content" : "Si quieres saber el clima en otro lugar enviáme tu ubicación",
+		"type" : "Clima",
+		"context" : "Clima",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Hotel",
+		"content" : "Con mucho gusto te ayudo a buscar un 🏨 Hospedaje",
+		"type" : "Hotel",
+		"context" : "Hotel",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Comida",
+		"content" : "Veo que tienes hambre 🍖 dejame ver como te ayudo ",
+		"type" : "Comida",
+		"context" : "Comida",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Comida",
+		"content" : "Espero que te sirva si quieres otra recomendación en otro lugar mandeme otra ubicación ",
+		"type" : "Comida1",
+		"context" : "Comida1",
+		"order" : 1,
+		"type_message" : "text_message"
+	},
+	{
+		"title" : "Comida",
+		"content" : "Te estoy mandando un recomendación de tu última ubicación si quieres en otro lugar mandame tu ubicación 🏔️ ",
+		"type" : "Tourist",
+		"context" : "Tourist",
+		"order" : 1,
+		"type_message" : "text_message"
+	}
+
+]
